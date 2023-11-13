@@ -15,6 +15,5 @@ class RecipeService
 
   def recipes_by_country(country)
     get_url("/api/recipes/v2?q=#{country}")
-    
   end
 end

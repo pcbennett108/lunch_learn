@@ -14,7 +14,9 @@ class TouristSitesFacade
   end
 
   def sites_in_radius(lon, lat)
-    # call service
-    # pass to poro
+    sites_data = PlacesService.new.sites_within_radius(lon, lat)
+    sites_data[:features].map do |site|
+      Sites.new(site)
+    end
   end
 end
