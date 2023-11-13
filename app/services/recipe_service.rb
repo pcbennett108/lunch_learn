@@ -17,6 +17,4 @@ class RecipeService
     get_url("/api/recipes/v2?q=#{country}")
     
   end
-
-
 end

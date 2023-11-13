@@ -13,6 +13,7 @@ gem "puma", ">= 5.0"
 
 #  JSON:API Serialization Library
 gem 'jsonapi-serializer'
+gem 'faraday'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
