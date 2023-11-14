@@ -14,6 +14,7 @@ gem "puma", ">= 5.0"
 #  JSON:API Serialization Library
 gem 'jsonapi-serializer'
 gem 'faraday'
+gem "bcrypt", "~> 3.1.7"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
@@ -51,7 +52,7 @@ group :test do
   gem "capybara"
   gem "launchy"
   gem "simplecov"
-  # gem "vcr"
+  gem "vcr"
   gem "webmock"
   gem 'shoulda-matchers', '~> 5.0'
 end
