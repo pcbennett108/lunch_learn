@@ -7,7 +7,6 @@ RSpec.describe AirQualityService do
 
     it 'returns a successful response', :vcr do
       response = service.quality_at_location(query)
-      require "pry" ; binding.pry
       #expect(response.status).to eq(200)
       expect(response).to be_a(Hash)
     end
