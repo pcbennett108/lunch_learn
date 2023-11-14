@@ -12,8 +12,8 @@ class PlacesService
     end
   end
 
-  def sites_within_radius(lon, lat)
-    get_url("/v2/places?categories=tourism.sights&filter=circle:#{lon},#{lat},5000")
+  def sites_within_radius(coordinates)
+    get_url("/v2/places?categories=tourism.sights&filter=circle:#{coordinates[1]},#{coordinates[0]},5000")
     
   end
 end
