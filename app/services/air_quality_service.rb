@@ -12,6 +12,6 @@ class AirQualityService
   end
 
   def quality_at_location(coordinates)
-    get_url("/data/2.5/air_pollution?#{coordinates[0]}&#{coordinates[1]}")
+    get_url("/data/2.5/air_pollution?lat=#{coordinates[0]}&lon=#{coordinates[1]}")
   end
 end
