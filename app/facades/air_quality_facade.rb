@@ -7,14 +7,18 @@ class AirQualityFacade
 
   def quality_at_location
     coordinates = get_coordinates
-    aq_data = AirQualityService.new.quality_at_location(coordinates)
-    require "pry" ; binding.pry
+    if coordinates == "Not Found"
+      nil
+    else
+      aq_data = AirQualityService.new.quality_at_location(coordinates)
+      AirQuality.new(aq_data)
+    end
   end
   
   def get_coordinates
     response = CountryService.new.country_name(@country)
     if response.first[:capitalInfo].empty?
-      [0,0]
+      "Not Found"
     else
       response.first[:capitalInfo][:latlng]
     end
