@@ -1,4 +1,4 @@
-class SearchedRecipeSerializer
+class RecipeSerializer
   include JSONAPI::Serializer
   attributes :title,
             :url,
