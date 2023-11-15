@@ -6,12 +6,9 @@ class LearningResourceFacade
   end
 
   def get_resources
-    video_data = self.video
+    video_data = VideoService.new.history(@country)
     # call image service
     # pass both through poro with country
   end
 
-  def video
-    VideoService.new.history(@country)
-  end
 end

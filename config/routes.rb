@@ -11,8 +11,7 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do 
       resources :recipes, only: [:index]
+      resources :learning_resources, only: [:index]
     end
   end
-
-  get "/api/v1/learning_resources", to: "api/v1/learning_resources#show"
 end
