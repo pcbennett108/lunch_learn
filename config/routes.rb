@@ -13,4 +13,6 @@ Rails.application.routes.draw do
       resources :recipes, only: [:index]
     end
   end
+
+  get "/api/v1/learning_resources", to: "api/v1/learning_resources#show"
 end
