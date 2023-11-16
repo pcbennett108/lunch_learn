@@ -9,14 +9,17 @@ class LearningResourceFacade
     video_data = video
     image_data = images
     require "pry" ; binding.pry
-    # pass both through poro with country
   end
-
+  
   def video
-    VideoService.new.history(@country)
+    responce = VideoService.new.history(@country)
+    Video.new(responce)
   end
 
   def images
-    ImageService.new.search(@country)
+    responce = ImageService.new.search(@country)
+    responce[:results].map do |image_data|
+      Images.new(image_data)
+    end
   end
 end

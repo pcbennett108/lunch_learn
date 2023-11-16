@@ -10,8 +10,8 @@ class RecipeFacade
   end
 
   def searched_recipes
-    data = RecipeService.new.recipes_by_country(@country)
-    data[:hits].map do |recipe_data|
+    responce = RecipeService.new.recipes_by_country(@country)
+    responce[:hits].map do |recipe_data|
       SearchedRecipes.new(recipe_data, @country)
     end
   end
